@@ -1,0 +1,16 @@
+# AED
+Trabalho de sabão em pó
+O fabricante do sabão em pó OMO, comercializa este
+produto em embalagens de 1 kg (1.000 gramas).
+
+Devido a aspectos legais, a empresa deseja saber se o
+processo automatizado é robusto, ou seja, se cada caixa
+tem realmente 1.000 gramas com uma margem de erro
+de 3%.
+
+Utilizando o arquivo OMO.csv disponível no Google Drive
+do curso, faça uma Análise Exploratória de Dados em
+Python e apresente as suas conclusões.
+
+Explore todas as medidas de tendência central e de
+variabilidade e construa gráficos, em especial o boxplot.
