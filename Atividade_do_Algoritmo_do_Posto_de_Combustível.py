@@ -1,0 +1,94 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Thalitarouth/AED/blob/main/Atividade_do_Algoritmo_do_Posto_de_Combust%C3%ADvel.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Pg4-GcC1yvxJ",
+        "outputId": "a0594183-e6bb-42db-e957-cc7ba1a5fe9c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Entrada de Dados\n",
+            "Entre com o preço do litro da gasolina R$: 5.59\n",
+            "Entre com o preço do litro do etanol R$: 2\n",
+            "Entre com a quantidade de litros desejada: 20\n",
+            " \n",
+            "Saída de Dados\n",
+            "Abasteça com Etanol!\n",
+            "No Pix/ Dinheiro R$ 38.00\n",
+            "No cartão PostoCerto R$ 38.80\n",
+            "Outros cartões R$ 40.00\n"
+          ]
+        }
+      ],
+      "source": [
+        "# @title ALGORITMO DO POSTO DE GASOLINA\n",
+        "\n",
+        "# ENTRADA DE DADOS\n",
+        "\n",
+        "print('Entrada de Dados')\n",
+        "preco_gasolina = float(input('Entre com o preço do litro da gasolina R$: '))\n",
+        "preco_etanol = float(input('Entre com o preço do litro do etanol R$: '))\n",
+        "litros = int(input('Entre com a quantidade de litros desejada: '))\n",
+        "\n",
+        "# PROCESSAMENTO DE DADOS\n",
+        "\n",
+        "# Determinar qual tipo de combustível é mais vantajoso para o cliente e\n",
+        "# calcular as alternativas de preço de abastecimento nos diferentes meios\n",
+        "# de pagamento.\n",
+        "\n",
+        "if preco_etanol >= (preco_gasolina * 0.7):\n",
+        "  combustivel_escolhido = 'Abasteça com Gasolina!'\n",
+        "  pgto_pix_dinheiro = (preco_gasolina * 0.95) * litros\n",
+        "  pgto_cartao_postocerto = (preco_gasolina * 0.97) * litros\n",
+        "  pgto_outros = preco_gasolina * litros\n",
+        "else:\n",
+        "  combustivel_escolhido = 'Abasteça com Etanol!'\n",
+        "  pgto_pix_dinheiro = (preco_etanol * 0.95) * litros\n",
+        "  pgto_cartao_postocerto = (preco_etanol * 0.97) * litros\n",
+        "  pgto_outros = preco_etanol * litros\n",
+        "\n",
+        "# SAÍDA DE DADOS\n",
+        "\n",
+        "print(' ')\n",
+        "print('Saída de Dados')\n",
+        "print(combustivel_escolhido)\n",
+        "print(f'No Pix/ Dinheiro R$ {pgto_pix_dinheiro:.2f}')\n",
+        "print(f'No cartão PostoCerto R$ {pgto_cartao_postocerto:.2f}')\n",
+        "print(f'Outros cartões R$ {pgto_outros:.2f}')"
+      ]
+    }
+  ]
+}
